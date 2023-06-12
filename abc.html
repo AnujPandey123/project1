@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Offers</title>
+  <style>
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .submit-btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .offers-list {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+    .offers-list li {
+      margin-bottom: 10px;
+    }
+  </style>
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", function() {
+      var productLink = document.getElementById("productLink").value;
+
+      // You can write your logic here to fetch offers based on the product link
+      // and populate the offersList with the received offers.
+
+      // For demonstration purposes, let's assume we have some dummy offers.
+      var dummyOffers = [
+        { title: "Offer 1", description: "Get 10% off on the product" },
+        { title: "Offer 2", description: "Buy 1, Get 1 free" },
+        { title: "Offer 3", description: "Free shipping on your purchase" }
+      ];
+
+      var offersList = document.getElementById("offersList");
+      offersList.innerHTML = "";
+
+      dummyOffers.forEach(function(offer) {
+        var listItem = document.createElement("li");
+        listItem.innerHTML = "<strong>" + offer.title + "</strong>: " + offer.description;
+        offersList.appendChild(listItem);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Product Offers</h1>
+    <input id="productLink" class="input-field" type="text" placeholder="Paste product link">
+    <button id="submitBtn" class="submit-btn">Get Offers</button>
+    <ul id="offersList" class="offers-list"></ul>
+  </div>
+
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", function() {
+      var productLink = document.getElementById("productLink").value;
+
+      // You can write your logic here to fetch offers based on the product link
+      // and populate the offersList with the received offers.
+
+      // For demonstration purposes, let's assume we have some dummy offers.
+      var dummyOffers = [
+        { title: "Offer 1", description: "Get 10% off on the product" },
+        { title: "Offer 2", description: "Buy 1, Get 1 free" },
+        { title: "Offer 3", description: "Free shipping on your purchase" }
+      ];
+
+      var offersList = document.getElementById("offersList");
+      offersList.innerHTML = "";
+
+      dummyOffers.forEach(function(offer) {
+        var listItem = document.createElement("li");
+        listItem.innerHTML = "<strong>" + offer.title + "</strong>: " + offer.description;
+        offersList.appendChild(listItem);
+      });
+    });
+  </script>
+</body>
+</html>
